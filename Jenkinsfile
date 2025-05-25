@@ -11,7 +11,7 @@ pipeline{
             steps{
                 sh "docker login -u dipesh017 -p Arvi.1418"
                 sh '''
-                    cd vote
+                    cdWQ vote
                     docker build -t dipesh017/vote:v${BUILD_NUMBER} .
                     '''
                 sh "docker push dipesh017/vote:v${BUILD_NUMBER}"
