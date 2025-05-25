@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage("Docker build and push"){
             steps{
-                sh "echo docker build"
+                sh "cd vote"
+                sh "docker build -t dipesh017/vote:v${BUILD_NUMBER} ."
             }
         }
         stage("Deploy"){
